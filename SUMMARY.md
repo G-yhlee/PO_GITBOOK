@@ -5,7 +5,11 @@
     * [다운로드 및 설치](book/get_started/setup.md)
     * [기본적인 사용법](book/get_started/basic_usage.md)
 * 튜토리얼
+    * [다운로드 및 설치](book/get_started/setup.md)
+    * [기본적인 사용법](book/get_started/basic_usage.md)
 * 심화학습
+    * [다운로드 및 설치](book/get_started/setup.md)
+    * [기본적인 사용법](book/get_started/basic_usage.md)
 
 <!-- 
 * [소개](book/index.md)
