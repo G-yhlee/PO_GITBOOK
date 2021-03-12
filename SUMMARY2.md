@@ -1,7 +1,7 @@
 # Summary
 
 * [Perfone Guide Book](README.md)  
-* 목차
+* [목차](SUMMARY2.md)  
 * 시작하기
     * [다운로드 및 설치](book/get_started/setup.md)  
 * 튜토리얼
