@@ -7,7 +7,8 @@ PerfOne을 실행한 후 스크립트를 작성합니다.
 
 ### 스크립트 레코더 작성 준비
 
-1. `스크립트 레코더` 실행을 위해 다음 작업을 수행합니다.  
+1. `스크립트 레코더` 실행을 위해 다음 작업을 수행합니다.
+
 ```erlang
 Manual Guide of 스크립트 레코더 실행
 
@@ -17,6 +18,7 @@ KEY : [Alt] + [R] + [N]
 ```
 
 2. `스크립트 작성`을 위해 다음작업을 수행합니다
+
 ```erlang
 Manual Guide of 스크립트 작성
 
@@ -26,6 +28,7 @@ KEY : [Ctrl] + [N]
 ```
 
 3. `스크립트 저장장소 지정`을 위해 다음 작업을 수행합니다.
+
 ```erlang
 Manual Guide of 스크립트 저장장소 지정
 
@@ -211,8 +214,7 @@ INFO:
 [ 스크립트 코드 작성 ]: 스크립트에 사용되는 코드는 erlang 코드입니다. 
 [ 코드 예시 위치 ]: C:\PerfOne\PerfOne-Deps\script-examples\replace_data_source 에서 예제 코드를 보실수 있습니다.
 ```
-
-
+# 
 - [ initialize ] - [스크립트 작성 ]
 ```erlang
 
