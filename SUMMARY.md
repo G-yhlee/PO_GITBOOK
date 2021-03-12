@@ -7,7 +7,7 @@
     * basic
       * [퍼프원 실행하기](book/tutorials/start_perfone.md)
       * [스크립트 레코드 작성하기](book/tutorials/script_record.md)
-      * [스크립트 레코드 작성하기](book/tutorials/script_record.md)
+      * [스크립트 레코드 작성하기2](book/tutorials/script_record2.md)
 
 
 * 심화학습
