@@ -8,15 +8,15 @@ PerfOne 을 실행한 후 스크립트를 작성합니다.
 ### 스크립트 레코더 작성 준비
 
 1. `스크립트 레코더` 실행을 위해 다음 작업을 수행합니다.
-```haskell
-Manual Guide -- 스크립트 레코더 실행
+```erlang
+Manual Guide of _스크립트 레코더 실행
 TASK: [스크립트 작성] - [레코더 실행]
 단축키: [Alt] + [R] + [N] 
 ```
 
 2. `스크립트 작성`을 위해 다음작업을 수행합니다
 ```erlang
-Manual_Guide.스크립트 작성
+Manual Guide of 스크립트 작성
 TASK: [파일] - [새로 만들기]
 단축키: [Ctrl] + [N]
 ```
