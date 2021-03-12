@@ -78,7 +78,22 @@ PerfOne 을 실행한 후 스크립트를 작성합니다.
 앞선 작업을 통해, [login] 트랜잭션이 생성되었습니다. 같은 방식으로, 
 [logout] 트랜잭션을 생성합니다. [logout] 트랜잭션은,  로그인 화면에서 [ 로그아웃 버튼 클릭 ]의 작업을 녹화하도록 합니다.
 ```
-
+```erlang
+-module(m). 
+-compile(export_all). % export([hello_world/0]).
+do_hello1() -> 
+    io:fwrite("hello, world\n"),
+    io:fwrite("~p, ~p\n",[hello,world]).
+do_hello2(X)->
+    case X of
+        french -> 'Bonjour';
+        german -> 'Gutentak';
+        english -> hello
+    end.
+```
+```html
+<h1> hi </h1>
+```
 3. `트랜잭션 녹화 종료 `하기 위해 다음 작업을 수행합니다.
 ```
 작업 :  [피들러 삭제 안내 메세지 확인 ] - [yes 버튼 클릭]
