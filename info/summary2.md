@@ -3,7 +3,7 @@
 * [Perfone Guide Book](../)  
 * 목차 
 * 시작하기
-  * [다운로드 및 설치](setup/)  
+  * [다운로드 및 설치](../undefined/setup.md)  
 * 튜토리얼
   * basic
     * [퍼프원 실행하기]()
