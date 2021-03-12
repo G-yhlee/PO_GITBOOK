@@ -7,75 +7,30 @@ PerfOne 을 실행한 후 스크립트를 작성합니다.
 
 ### 스크립트 레코더 작성 준비
 
+1. `스크립트 레코더` 실행을 위해 다음 작업을 수행합니다.
 ```erlang
-Manual Guide of _스크립트 레코더 실행
-```
-```erlang
+Manual Guide of 스크립트 레코더 실행
 TASK: [스크립트 작성] - [레코더 실행]
 단축키: [Alt] + [R] + [N] 
 ```
-
-
-```erlang
-Manual Guide of _스크립트 레코더 실행
-```
-```erlang
-TASK: [스크립트 작성] - [레코더 실행]
-단축키: [Alt] + [R] + [N] 
-```
-
-
-```erlang
-Manual Guide of _스크립트 레코더 실행
-```
-```erlang
-TASK: [스크립트 작성] - [레코더 실행]
-단축키: [Alt] + [R] + [N] 
-```
-
-
-```erlang
-Manual Guide of _스크립트 레코더 실행
-```
-```erlang
-TASK: [스크립트 작성] - [레코더 실행]
-단축키: [Alt] + [R] + [N] 
-```
-<!-- 1. `스크립트 레코더` 실행을 위해 다음 작업을 수행합니다.
-```erlang
-Manual Guide of _스크립트 레코더 실행
-TASK: [스크립트 작성] - [레코더 실행]
-단축키: [Alt] + [R] + [N] 
-``` -->
-
 2. `스크립트 작성`을 위해 다음작업을 수행합니다
 ```erlang
 Manual Guide of 스크립트 작성
 TASK: [파일] - [새로 만들기]
 단축키: [Ctrl] + [N]
 ```
-2. `스크립트 작성`을 위해 다음작업을 수행합니다
-```erlang
-Manual.Guide.스크립트 작성
-TASK: [파일] - [새로 만들기]
-단축키: [Ctrl] + [N]
-```
-
-
 3. `스크립트 저장장소 지정`을 위해 다음 작업을 수행합니다.
 ```erlang
-Manual Guide 
+Manual Guide of 스크립트 저장장소 지정
 TASK: [저장할 폴더 선택] - [OK 버튼 클릭]
 INFO: 저장폴더는 Documents 폴더가 기본 폴더입니다. 
 ```
-
 4. `스크립트명을 작성`하기 위해 다음 작업을 수행합니다.
 ```erlang
 Manual Guide 
 TASK: [스크립트 이름 작성] - [확인 버튼 클릭]
 INFO: 스크립트명은 영문, 숫자를 권장하며, 한글명은 권장하지 않습니다. 
 ```
-
 5. `피들러를 설치`하기 위해 다음 작업을 수행합니다.
 ```erlang
 Manual Guide 
