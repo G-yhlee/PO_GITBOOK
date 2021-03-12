@@ -119,12 +119,72 @@ INFO:
 
 ---
 
-### 스크립트 레코더 결과 설정
-1. `트랜잭션간 대기시간 설정` 하기 위해 다음 작업을 수행 합니다.
+### 스크립트 레코더 대기 시간 설정
+`트랜잭션간 대기시간 설정` 하기 위해 다음 작업을 수행 합니다.
 ```erlang
 Manual Guide of 트랜잭션간 대기시간 설정
 TASK: [ 트랜잭션 목록에서 트랜잭션 클릭 ] - [대기시간 클릭] - [시간입력 및 환인 클릭]
 INFO: 
 [ 대기 시간 넣는 이유 ]:  실제 사용환경을 시뮬레이션하기위해 트랜잭션간에 Think Time을 넣어 준다.
 [ Think TIme 의미 ]: Think Time(생각시간)이란, 실제 사용자가 다음 작업에 넘어가는데 걸리는 시간을 의미한다.
+```
+---
+
+### 스크립트 레코더 이니셜라이져 설정
+`이니셜 라이져 설정` 하기 위해 다음 작업을 수행 합니다.
+```erlang
+Manual Guide of 이니셜 라이져 설정
+TASK: [ 트랜잭션 목록에서 initialize 클릭 ] - [스크립트 클릭] - [ 스크립트 코드 작성 ] - [ 적용 버튼 클릭 ]
+INFO: 
+[ initialize ] : 이니셜라이즈는 트랜잭션 수행의 초기 설정을 정의 합니다. 이니셜 라이즈의 스크립트를 수정하여, 설정을 변경할수 있습니다.
+[ 코드 예시 위치 ]: C:\PerfOne\PerfOne-Deps\script-examples\replace_data_source 에서 예제 코드를 보실수 있습니다.
+[ 스크립트 코드 작성 ]: 스크립트에 사용되는 코드는 erlang 코드입니다. 
+===================================================================================================
+SAMPLE SCRIPT CODE: 
+put(length_info, {1, 2, big_header}),
+replace_data_source:set_unique("gridcsv.csv"),
+replace_data_source:when_out_of_values("gridcsv.csv",restart),
+next.
+
+% set_unique 함수 : csv 파일을 받아서 중복 방지를 위한 unique 설정을 한다.
+% when_out_of_values 함수 : value값이 모두 처리되었을 경우 처리방식을 설정한다. 예시코드에선 'restart'로 설정되어있다.
+
+```
+---
+### 스크립트 레코더 치환변수 설정
+`치환 변수 설정` 하기 위해 다음 작업을 수행 합니다.
+```erlang
+Manual Guide of 치환 변수 설정 : initialize
+TASK: [ 트랜잭션 목록에서 initialize 클릭 ] - [스크립트 클릭] - [ 스크립트 코드 작성 ] - [ 적용 버튼 클릭 ]
+
+CODE: 
+put(length_info, {1, 2, big_header}),
+replace_data_source:set_unique("gridcsv.csv"),
+replace_data_source:when_out_of_values("gridcsv.csv",restart),
+next.
+
+INFO: 
+[ initialize ] : 이니셜라이즈는 트랜잭션 수행의 초기 설정을 정의 합니다. 이니셜 라이즈의 스크립트를 수정하여, 설정을 변경할수 있습니다.
+[ 스크립트 코드 작성 ]: 스크립트에 사용되는 코드는 erlang 코드입니다. 
+[ 코드 예시 위치 ]: C:\PerfOne\PerfOne-Deps\script-examples\replace_data_source 에서 예제 코드를 보실수 있습니다.
+```
+
+
+- [ initialize ] - [스크립트 작성 ]
+```erlang
+
+```
+- [ login 트랜잭션 ] - [ POST 액션 ] - [스크립트 작성 예시 ]
+```erlang
+replace_data_source:fetch_next_row("gridcsv.csv"),
+id = replace_data_source:get_value("ID","gridcsv.csv"),
+pwd = replace_data_source:get_value("PWD","gridcsv.csv"),
+```
+
+- 로그인:post
+```erlang
+"username="++ id ++"&password=" ++ pwd ++
+[]
+```
++ 메뉴얼 개정 : 스크립트 수정후 [적용] 눌러야 하는 내용 설명 넣기
 ```
