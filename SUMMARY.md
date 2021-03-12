@@ -5,8 +5,8 @@
     * [다운로드 및 설치](book/get_started/setup.md)  
 * 튜토리얼
     * perfone-pro 실행하기
-      * [perfone-pro 실행하기](book/tutorial/start_perfone.md)
-      * [스크립트 레코드](book/tutorial/script_record.md)
+      * [perfone-pro 실행하기](book/tutorials/start_perfone.md)
+      * [스크립트 레코드](book/tutorials/script_record.md)
 * 심화학습
     * [다운로드 및 설치](book/get_started/setup.md)
     * [기본적인 사용법](book/get_started/basic_usage.md)
