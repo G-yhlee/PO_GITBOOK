@@ -173,23 +173,28 @@ PerfOne을 실행한 후 스크립트를 작성합니다. 스크립트 작성은
 1. `이니셜 라이져 설정` 하기 위해 다음 작업을 수행 합니다.
 
    ```erlang
-    Manual Guide of 이니셜 라이져 설정
+   Manual Guide of 이니셜 라이져 설정
 
-    TASK: [ 트랜잭션 목록에서 initialize 클릭 ] - [스크립트 클릭] - [ 스크립트 코드 작성 ] - [ 적용 버튼 클릭 ]
+   TASK: [ 트랜잭션 목록에서 initialize 클릭 ] - [우측 패널의 스크립트 클릭] - [ 스크립트 코드 수정 ] - [ 적용 버튼 클릭 ]
 
-    INFO: 
-    * initialize: 이니셜라이즈는 트랜잭션 수행의 초기 설정을 정의 합니다. 이니셜 라이즈의 스크립트를 수정하여, 설정을 변경할수 있습니다.
-    * 코드 예시 위치: C:\PerfOne\PerfOne-Deps\script-examples\replace_data_source 에서 예제 코드를 보실수 있습니다.
-    * 스크립트 코드 작성: 스크립트에 사용되는 코드는 erlang 코드입니다. 
+   TIP:
+   * 스크립트 예시 코드 위치: C:\PerfOne\PerfOne-Deps\script-examples\replace_data_source 
+   * 치환 데이터 파일 저장 위치: C:\PerfOne\Controller\priv\replace 
+   
+   INFO: 
+   * initialize: 이니셜라이즈는 트랜잭션 수행의 초기 설정을 정의 합니다. 이니셜 라이즈의 스크립트를 수정하여, 설정을 변경할수 있습니다.
+   * replace data(치환 데이터) 는 csv 파일 형식으로 저장 하며, 이 파일은 replace_data_source 모듈의 함수의 인자값으로 사용된다. 
 
-    SAMPLE SCRIPT CODE: 
-    put(length_info, {1, 2, big_header}),
-    replace_data_source:set_unique("gridcsv.csv"),
-    replace_data_source:when_out_of_values("gridcsv.csv",restart),
-    next.
+   SAMPLE SCRIPT CODE: 
+   put(length_info, {1, 2, big_header}),
+   replace_data_source:set_unique("data.csv"),
+   replace_data_source:when_out_of_values("data.csv",restart),
+   next.
 
-    % set_unique 함수 : csv 파일을 받아서 중복 방지를 위한 unique 설정을 한다.
-    % when_out_of_values 함수 : value값이 모두 처리되었을 경우 처리방식을 설정한다. 예시코드에선 'restart'로 설정되어있다.
+   % set_unique : 데이터 중복 방지를 위한 unique 설정 한다.
+   % when_out_of_values 함수 : value값이 모두 처리되었을 경우 처리방식을 설정한다. 예시코드에선 'restart' 로 설정되어있다.
+   % 처리방식 : abort, last, restart(default:restart)
+   
    ```
 
 ## 스크립트 레코더 치환변수 설정
@@ -197,43 +202,45 @@ PerfOne을 실행한 후 스크립트를 작성합니다. 스크립트 작성은
 1. `치환 변수 설정` 하기 위해 다음 작업을 수행 합니다.
 
    ```erlang
-    Manual Guide of 치환 변수 설정 : initialize
-    TASK: [ 트랜잭션 목록에서 initialize 클릭 ] - [스크립트 클릭] - [ 스크립트 코드 작성 ] - [ 적용 버튼 클릭 ]
+   Manual Guide of 치환 변수 설정
 
-    CODE: 
-    put(length_info, {1, 2, big_header}),
-    replace_data_source:set_unique("gridcsv.csv"),
-    replace_data_source:when_out_of_values("gridcsv.csv",restart),
-    next.
+   TASK: [ 트랜잭션 목록에서 치환변수를 적용할 트랜잭션 클릭 ] - [스크립트 클릭] - [ 스크립트 코드 작성 ] - [ 적용 버튼 클릭 ]
 
-    INFO: 
-    [ initialize ] : 이니셜라이즈는 트랜잭션 수행의 초기 설정을 정의 합니다. 이니셜 라이즈의 스크립트를 수정하여, 설정을 변경할수 있습니다.
-    [ 스크립트 코드 작성 ]: 스크립트에 사용되는 코드는 erlang 코드입니다. 
-    [ 코드 예시 위치 ]: C:\PerfOne\PerfOne-Deps\script-examples\replace_data_source 에서 예제 코드를 보실수 있습니다.
+   INFO: 
+   * 치환데이터는 트랜잭션에 적용될 데이터이다. 
+   * 사용예시(로그인 트랜잭션의 경우): 로그인 트랜잭션에서는 로그인 데이터 정보가 필요하므로 로그인 정보를 치환변수에 저장하여 사용한다.
+
+   SAMPLE SCRIPT CODE: 
+   replace_data_source:fetch_next_row("data.csv"),
+   id = replace_data_source:get_value("ID","data.csv"),
+   pwd = replace_data_source:get_value("PWD","data.csv"),
+      
    ```
-
-2. \[ initialize \] - \[스크립트 작성 \]
+2. `치환 변수 설정 적용` 하기 위해 다음 작업을 수행 합니다.
 
    ```erlang
+   Manual Guide of 치환 변수 설정
+
+   TASK: [ 트랜잭션 목록에서 치환변수를 적용할 액션클릭 ] - [ 치환 변수가 적용될 영역 클릭 ] - [ 스크립트 코드 작성 ] - [ 적용 버튼 클릭 ]
+
+   INFO: 
+   * 예시코드에서는, [ 로그인 트랜잭션 ]- [ POST 액션 ] - [ Message Body 영역 코드 수정 ] 의 코드 내용을 보여준다.
+   
+
+   SAMPLE SCRIPT CODE: 
+   "username="++ id ++ "&" ++ "password=" ++ pwd ++ []
 
    ```
 
-3. \[ login 트랜잭션 \] - \[ POST 액션 \] - \[스크립트 작성 예시 \]
+
+
+## 최종 점검 및 저장 
+
+1. `최종 점검 및 저장 ` 하기 위해 다음 작업을 수행 합니다.
 
    ```erlang
-    replace_data_source:fetch_next_row("gridcsv.csv"),
-    id = replace_data_source:get_value("ID","gridcsv.csv"),
-    pwd = replace_data_source:get_value("PWD","gridcsv.csv"),
+    Manual Guide of 최종 점검 및 저장 
+   
+    INFO: 변경사항 적용이 완료되었다면, 앞선 검증 과정을 다시 한번 진행한 이후 저장을 하고, 스크립트 레코더를 종료합니다.
+    
    ```
-
-4. 로그인:post
-
-   ```erlang
-    "username="++ id ++"&password=" ++ pwd ++
-    []
-   ```
-
-   * 메뉴얼 개정 : 스크립트 수정후 \[적용\] 눌러야 하는 내용 설명 넣기
-
-     \`\`\`
-
