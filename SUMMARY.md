@@ -6,11 +6,10 @@
 
 * [목차](info/summary2.md)
 
-## 시작하기
+## install
 
 * [다운로드 및 설치](undefined/setup.md)
 
-## ========================= <a id="undefined-1"></a>
 
 ## basic
 
