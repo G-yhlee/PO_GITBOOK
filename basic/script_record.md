@@ -225,7 +225,6 @@ PerfOne을 실행한 후 스크립트를 작성합니다. 스크립트 작성은
 
    INFO: 
    * 예시코드에서는, [ 로그인 트랜잭션 ]- [ POST 액션 ] - [ Message Body 영역 코드 수정 ] 의 코드 내용을 보여준다.
-   
 
    SAMPLE SCRIPT CODE: 
    "username="++ id ++ "&" ++ "password=" ++ pwd ++ []
