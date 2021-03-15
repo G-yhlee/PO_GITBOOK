@@ -184,10 +184,8 @@ PerfOne을 실행한 후 스크립트를 작성합니다. 스크립트 작성은
    INFO: 
    * initialize: 이니셜라이즈는 트랜잭션 수행의 초기 설정을 정의 합니다. 이니셜 라이즈의 스크립트를 수정하여, 설정을 변경할수 있습니다.
    * replace data(치환 데이터) 는 csv 파일 형식으로 저장 하며, 이 파일은 replace_data_source 모듈의 함수의 인자값으로 사용된다. 
-
-
-   
    ```
+
    ```erlang
    Tutorial Guide of 이니셜 라이져 설정
 
