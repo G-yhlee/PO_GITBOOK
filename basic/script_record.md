@@ -185,16 +185,26 @@ PerfOne을 실행한 후 스크립트를 작성합니다. 스크립트 작성은
    * initialize: 이니셜라이즈는 트랜잭션 수행의 초기 설정을 정의 합니다. 이니셜 라이즈의 스크립트를 수정하여, 설정을 변경할수 있습니다.
    * replace data(치환 데이터) 는 csv 파일 형식으로 저장 하며, 이 파일은 replace_data_source 모듈의 함수의 인자값으로 사용된다. 
 
-   SAMPLE SCRIPT CODE: 
+
+   
+   ```
+   ```erlang
+   Tutorial Guide of 이니셜 라이져 설정
+
+   INFO: 튜토리얼에서는, 아래와 같은 샘플 코드를 스크립트 코드에 입력하겠습니다.
+
+   SAMPLE SCRIPT CODE:
+   
    put(length_info, {1, 2, big_header}),
    replace_data_source:set_unique("data.csv"),
    replace_data_source:when_out_of_values("data.csv",restart),
    next.
 
    % set_unique : 데이터 중복 방지를 위한 unique 설정 한다.
-   % when_out_of_values 함수 : value값이 모두 처리되었을 경우 처리방식을 설정한다. 예시코드에선 'restart' 로 설정되어있다.
-   % 처리방식 : abort, last, restart(default:restart)
-   
+   % when_out_of_values: value값이 모두 처리되었을 경우 처리방식을 설정한다. 예시코드에선 'restart' 로 설정되어있다.
+   % 처리방식 : abort, last, restart(default:restart) 등이 있다.
+
+
    ```
 
 ## 스크립트 레코더 치환변수 설정
@@ -216,6 +226,22 @@ PerfOne을 실행한 후 스크립트를 작성합니다. 스크립트 작성은
    pwd = replace_data_source:get_value("PWD","data.csv"),
       
    ```
+   ```erlang
+   Tutorial Guide of 치환 변수 설정
+
+   INFO: 튜토리얼에서는, 아래와 같은 샘플 코드를 스크립트 코드에 입력하겠습니다.
+
+   SAMPLE SCRIPT CODE:
+   replace_data_source:fetch_next_row("data.csv"),
+   id = replace_data_source:get_value("ID","data.csv"),
+   pwd = replace_data_source:get_value("PWD","data.csv"),
+
+   % fetch_next_row : data.csv 파일로 부터 row 값을 가져옵니다.
+   % get_value  : data.csv 파일로 부터 값을 가져옵니다.
+
+
+   ```
+
 2. `치환 변수 설정 적용` 하기 위해 다음 작업을 수행 합니다.
 
    ```erlang
