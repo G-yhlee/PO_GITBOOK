@@ -201,8 +201,6 @@ PerfOne을 실행한 후 스크립트를 작성합니다. 스크립트 작성은
    % set_unique : 데이터 중복 방지를 위한 unique 설정 한다.
    % when_out_of_values: value값이 모두 처리되었을 경우 처리방식을 설정한다. 예시코드에선 'restart' 로 설정되어있다.
    % 처리방식 : abort, last, restart(default:restart) 등이 있다.
-
-
    ```
 
 ## 스크립트 레코더 치환변수 설정
