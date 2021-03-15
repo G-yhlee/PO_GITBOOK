@@ -17,5 +17,6 @@
     * [퍼프원 실행하기](../advanced/undefined.md)
     * [스크립트 레코드 작성하기](../advanced/undefined-1.md)
 
-
+* 서비스
+  * [FAQ](service/FAQ.md)
 
