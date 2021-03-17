@@ -7,8 +7,8 @@
   * basic
     * [퍼프원 실행하기](../basic/start_perfone.md)
     * [스크립트 레코드 작성하기](../basic/script_record.md)
-    * [시험환경 설정하기](basic/agent_setting.md)
-    * [시나리오 설정하기](basic/scenario_setting.md)
+    * [시험환경 설정하기](../basic/agent_setting.md)
+    * [시나리오 설정하기](../basic/scenario_setting.md)
 
   * pro
     * [스크립트 레코드 작성하기](../pro/undefined-1.md)
@@ -19,4 +19,6 @@
 
 * 서비스
   * [FAQ](../service/FAQ.md)
+
+
 
