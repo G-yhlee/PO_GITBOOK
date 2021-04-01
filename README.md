@@ -13,7 +13,7 @@
 
 ![](.gitbook/assets/perfone_monitor.jpg)
 
-Perfone Github [https://github.com/G-yhlee/PO\_guide\_book](https://github.com/G-yhlee/PO_guide_book)  
+Perfone Github [https://github.com/G-yhlee/PO\_guide\_book](https://github.com/G-yhlee/PO_GITBOOK)  
 Perfone install [http://www.gridone.co.kr/community/download](http://www.gridone.co.kr/community/download)
 
 * 임시계정 : guest\_001
